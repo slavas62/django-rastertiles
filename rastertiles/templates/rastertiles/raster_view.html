@@ -1,0 +1,25 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.js"></script>
+</head>
+<body>
+<div id="map" style="height: 100%"></div>
+<script type="text/javascript">
+var map = L.map('map');
+
+{% load l10n %}
+{% with ext=object.extent %}
+{% localize off %}
+map.fitBounds([
+    [{{ ext.1 }}, {{ ext.0 }}],
+    [{{ ext.3 }}, {{ ext.2 }}]
+]);
+{% endlocalize %}
+{% endwith %}
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+L.tileLayer('{{ object.get_tiles_uri_template }}').addTo(map);
+</script>
+</body>
+</html>
