@@ -7,7 +7,7 @@ setup(
     include_package_data=True,
     long_description=open('README.rst').read(),
     install_requires=[
-        'python-mapnik',
+        'mapnik',
         'sphericalmercator',
     ],
 )
