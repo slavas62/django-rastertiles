@@ -10,7 +10,7 @@ from django.conf import settings
 from django.contrib.gis.gdal import GDALRaster
 from django.contrib.gis.geos import Polygon
 from django.contrib.gis.gdal.error import GDALException
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _ # fix
 from .statistics import band_statistics
 
 STORAGE = getattr(settings, 'RASTERTILES_STORAGE', None)
