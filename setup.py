@@ -8,6 +8,6 @@ setup(
     long_description=open('README.rst').read(),
     install_requires=[
         'sphericalmercator',
-        'mapnik2',
+        'python3-mapnik',
     ],
 )
