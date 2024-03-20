@@ -3,7 +3,8 @@ import tempfile
 from django.db import models
 from django.db.models.signals import post_delete
 from django.dispatch import receiver
-from django.core.urlresolvers import reverse
+# from django.core.urlresolvers import reverse
+from django.urls import reverse # fix
 from django.core.exceptions import ValidationError
 from django.conf import settings
 from django.contrib.gis.gdal import GDALRaster
