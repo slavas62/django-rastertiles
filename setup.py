@@ -1,10 +1,12 @@
 from setuptools import setup, find_packages
+import sys
 
 install_deps = ['sphericalmercator']
-if get_dist('mapnik'):
-    install_deps.append('mapnik')
-else:
+
+if sys.version_info[0] == 3:               # Python version
     install_deps.append('python3-mapnik')
+else:
+    install_deps.append('mapnik')
 
 setup(
     name='django-rastertiles',
