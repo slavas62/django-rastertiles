@@ -4,7 +4,7 @@ import sys
 install_deps = ['sphericalmercator']
 
 if sys.version_info[0] == 3:               # Python version
-    install_deps.append('python3-mapnik')
+#    install_deps.append('python3-mapnik')
 else:
     install_deps.append('mapnik')
 
